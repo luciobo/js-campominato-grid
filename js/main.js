@@ -8,6 +8,9 @@ const btnCreaGriglia = document.getElementById("btn_creagriglia");
 console.log(btnCreaGriglia)
 
 
-btnCreaGriglia.addEventListener("click", function () {
-    console.log(btnCreaGriglia);
-}
+btnCreaGriglia.addEventListener("click", function() {
+    console.log("bottone avanti cliccato")
+
+
+
+})
