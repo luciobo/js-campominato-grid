@@ -11,7 +11,7 @@ console.log(btnCreaGriglia);
 btnCreaGriglia.addEventListener("click", function () {
     console.log("hai cliccato il pulsante");
 
-    generaLaGriglia(3);
+    generaLaGriglia(10);
 
 });
 
@@ -35,6 +35,8 @@ function generaLaGriglia(celle) {
         nuovaCellaCreata.classList.add("contenuto-cella");
         nuovaCellaCreata.style.width = `calc(100% / ${celle})`;
         console.log(nuovaCellaCreata)
+
+        contenitoreGriglia.append(nuovaCellaCreata)
     }
-    contenitoreGriglia.append()
+    
 }
