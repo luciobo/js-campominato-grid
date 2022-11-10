@@ -22,9 +22,13 @@ btnCreaGriglia.addEventListener("click", function () {
 
 function generaLaGriglia(celle) {
 
+
+
     // recupero il cointenitore dove mettero la mia griglia
     const contenitoreGriglia = document.querySelector(".contenitore-griglia")
     // ora devo creare qualcosa che mi permetta di generare la griglia stessa
+
+    contenitoreGriglia.innerHTML = "";
 
     const celleTotali = celle * celle;
 
@@ -36,7 +40,11 @@ function generaLaGriglia(celle) {
         nuovaCellaCreata.style.width = `calc(100% / ${celle})`;
         console.log(nuovaCellaCreata)
 
+        nuovaCellaCreata.innerHTML = [i]
+        
         contenitoreGriglia.append(nuovaCellaCreata)
     }
-    
+
+
+
 }
