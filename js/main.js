@@ -11,18 +11,16 @@ console.log(btnCreaGriglia);
 btnCreaGriglia.addEventListener("click", function () {
     console.log("hai cliccato il pulsante");
 
-    generaLaGriglia(10);
+    const inputNumCell = document.querySelector(".numero-celle")
+
+    generaLaGriglia(inputNumCell.value);
 
 });
 
 // ora che ho reciuperato con fatica il click devo creare una 
 // funzione che mi genri la griglia 
 
-
-
 function generaLaGriglia(celle) {
-
-
 
     // recupero il cointenitore dove mettero la mia griglia
     const contenitoreGriglia = document.querySelector(".contenitore-griglia")
@@ -40,8 +38,17 @@ function generaLaGriglia(celle) {
         nuovaCellaCreata.style.width = `calc(100% / ${celle})`;
         console.log(nuovaCellaCreata)
 
-        nuovaCellaCreata.innerHTML = [i]
-        
+        nuovaCellaCreata.innerHTML = [i + 1]
+
+        nuovaCellaCreata.addEventListener("click", function () {
+            console.log(nuovaCellaCreata)
+
+            // ora al click cerco di cambiare colore alla casella!
+            this.classList.toggle("bg-success")
+
+
+        })
+
         contenitoreGriglia.append(nuovaCellaCreata)
     }
 
